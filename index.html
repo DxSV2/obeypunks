@@ -1,6 +1,5 @@
-
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,34 +7,49 @@
   <style>
     body {
       background: #0a0a0a;
-      color: white;
+      color: #ffffff;
       font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 40px 20px;
+      padding: 20px;
       line-height: 1.6;
     }
-    h1 {
-      color: #ff6600;
-      font-size: 36px;
-    }
-    h2 {
-      color: #cccccc;
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
     }
     .box {
-      max-width: 500px;
-      margin: 30px auto;
-      background: #1a1a1a;
-      padding: 25px;
+      background: #111111;
       border: 2px solid #ff6600;
-      border-radius: 10px;
+      border-radius: 12px;
+      padding: 25px;
+      margin-bottom: 20px;
+    }
+    h1, h2 {
+      text-align: center;
+      color: #ff6600;
+    }
+    .tasks ul {
+      list-style: none;
+      padding: 0;
+    }
+    .tasks li {
+      padding: 12px 0;
+      border-bottom: 1px solid #222;
+    }
+    .tasks li:last-child {
+      border-bottom: none;
+    }
+    a {
+      color: #ffaa00;
+      text-decoration: underline;
     }
     input {
       width: 100%;
       padding: 15px;
       margin: 10px 0;
-      background: #222;
+      background: #1a1a1a;
       border: 2px solid #ff6600;
       color: white;
+      border-radius: 6px;
       font-size: 16px;
     }
     button {
@@ -46,42 +60,45 @@
       font-size: 18px;
       font-weight: bold;
       border: none;
+      border-radius: 6px;
       cursor: pointer;
-    }
-    button:hover {
-      background: #ff8533;
+      margin-top: 10px;
     }
   </style>
 </head>
 <body>
-  <h1>OBEYPUNKS</h1>
-  <h2>WHITELIST APPLICATION</h2>
+  <div class="container">
 
-  <div class="box">
-    <p><strong>LIMITED SPOTS</strong></p>
-    <p>Selesaikan social tasks lalu submit wallet kamu.</p>
-  </div>
+    <!-- Limited Spots -->
+    <div class="box">
+      <h2>LIMITED SPOTS</h2>
+      <p style="text-align:center;">Complete the social tasks below and submit your wallet.</p>
+    </div>
 
-  <div class="box">
-    <h3>SOCIAL TASKS</h3>
-    <p style="text-align:left; line-height:2.2;">
-      • Follow @ObeyPunks on X<br>
-      • Follow Founder on X<br>
-      • Like & Repost Pinned Post<br>
-      • Quote Post & Tag 3 Friends<br>
-      • Buat Tweet terbaik tentang ObeyPunks
+    <!-- Social Tasks -->
+    <div class="box tasks">
+      <h2>SOCIAL TASKS</h2>
+      <ul>
+        <li>• Follow <a href="https://x.com/ObeyPunks" target="_blank">@ObeyPunks</a> on X</li>
+        <li>• Like & Repost the <a href="https://x.com/ObeyPunks/status/YOUR_PINNED_POST_ID" target="_blank">Pinned Post</a></li>
+        <li>• Comment your wallet address on the pinned post</li>
+      </ul>
+    </div>
+
+    <!-- Submit Wallet -->
+    <div class="box">
+      <h2>SUBMIT WALLET</h2>
+      <form action="https://formspree.io/f/mvzyybla" method="POST">
+        <input type="text" name="x_username" placeholder="@Your X Username" required>
+        <input type="text" name="wallet_address" placeholder="0xYour Wallet Address" required>
+        <button type="submit">SUBMIT WHITELIST</button>
+      </form>
+    </div>
+
+    <p style="text-align: center; margin-top: 30px; opacity: 0.6; font-size: 14px;">
+      ObeyPunks Whitelist
     </p>
-  </div>
 
-  <div class="box">
-    <h3>SUBMIT WALLET</h3>
-    <form action="https://formspree.io/f/mvzyybla" method="POST">
-      <input type="text" name="x_username" placeholder="@Username X kamu" required>
-      <input type="text" name="wallet_address" placeholder="0xWallet Address kamu" required>
-      <button type="submit">SUBMIT WHITELIST</button>
-    </form>
   </div>
-
-  <p style="margin-top:50px; opacity:0.6;">ObeyPunks Whitelist 2026</p>
 </body>
 </html>
