@@ -16,7 +16,6 @@
       overflow-x: hidden;
     }
 
-    /* Pixel Background */
     body::before {
       content: '';
       position: fixed;
@@ -80,6 +79,7 @@
       font-size: 18px;
       font-weight: bold;
       color: #ffcc00;
+      margin-bottom: 20px;
     }
 
     input {
@@ -121,7 +121,6 @@
       <p style="color:#ffaa00;">500 Limited Whitelist Spots</p>
     </div>
 
-    <!-- Description -->
     <div class="box">
       <h2 style="text-align:center;">WHAT IS OBEYPUNKS?</h2>
       <p style="text-align:center;">
@@ -131,22 +130,19 @@
       </p>
     </div>
 
-    <!-- Apply Whitelist -->
     <div class="apply-box">
       ✅ APPLY WHITELIST
     </div>
 
-    <!-- Social Tasks -->
     <div class="box">
       <h2>SOCIAL TASKS</h2>
       <ul style="list-style:none; padding:0; line-height:2.2;">
         <li>• Follow <a href="https://x.com/obeypunkseth" target="_blank">@obeypunkseth</a> on X</li>
-        <li>• Like & Repost the Pinned Post</li>
+        <li>• Like & Repost the <a href="https://x.com/obeypunkseth/status/2060488657241600018" target="_blank">Pinned Post</a></li>
         <li>• Comment your wallet address on the pinned post</li>
       </ul>
     </div>
 
-    <!-- Submit Form -->
     <div class="box" id="formSection">
       <h2>SUBMIT WALLET</h2>
       <form action="https://formspree.io/f/mvzyybla" method="POST">
@@ -163,11 +159,10 @@
   </div>
 
   <script>
-    // Ganti jadi "closed" kalau sudah penuh
     const status = "open";
     if (status === "closed") {
       document.getElementById('formSection').innerHTML = `
-        <h2 style="color:#cc0000; text-align:center;">WHITELIST IS CLOSED</h2>
+        <h2 style="color:#cc0000;text-align:center;">WHITELIST IS CLOSED</h2>
         <p style="text-align:center;">Thank you for your interest.<br>500 spots have been filled.</p>
       `;
     }
